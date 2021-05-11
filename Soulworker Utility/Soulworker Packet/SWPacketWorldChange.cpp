@@ -9,6 +9,7 @@ SWPacketWorldChange::SWPacketWorldChange(SWHEADER* swheader, BYTE* data) : SWPac
 }
 
 VOID SWPacketWorldChange::Do() {
+	
 	SWPACKETWORLDCHANGE* world_change = (SWPACKETWORLDCHANGE*)(_data + sizeof(SWHEADER));
 
 	DAMAGEMETER.SetMyID(world_change->_id);

@@ -25,8 +25,7 @@ VOID SWPacket::Debug() {
 	
 	for (int i = 0; i < _swheader->_size; i++)
 		Log::WriteLogA(const_cast<CHAR*>("%02x "), _data[i]);
-	Log::WriteLogA(const_cast<CHAR*>("\n"));*/
-	
-	
+	Log::WriteLogA(const_cast<CHAR*>("\n"));
+	*/
 	return;
 }

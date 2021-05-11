@@ -247,6 +247,7 @@ DWORD SWPacketMaker::Parse(IPv4Packet* packet) {
 	default:
 		return ERROR_FUNCTION_FAILED;
 	}
+
 	CheckRemainPacket(packet);
 
 	return ERROR_SUCCESS;

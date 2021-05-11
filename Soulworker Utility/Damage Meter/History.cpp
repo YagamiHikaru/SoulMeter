@@ -46,11 +46,11 @@ const HISTORY_INFO& SWDamageMeterHistory::operator[](INT index) {
 }
 
 SIZE_T SWDamageMeterHistory::size() {
-
+	// To Do:
+	// Check if _curIndex == HISTORY_SIZE makes array out of range
 	if (_curIndex >= HISTORY_SIZE)
 		return HISTORY_SIZE;
-	else
-		return _curIndex % HISTORY_SIZE;
+	return _curIndex % HISTORY_SIZE;
 }
 
 SIZE_T SWDamageMeterHistory::getCurrentIndex() {

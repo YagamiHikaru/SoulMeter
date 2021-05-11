@@ -40,7 +40,7 @@ inline BOOL ANSItoUTF8(_In_ CHAR* src, _Out_ CHAR* dest, _In_ SIZE_T destLen) {
 		return FALSE;
 
 	if (len < destLen) {
-		WideCharToMultiByte(CP_ACP, 0, bstr, -1, dest, destLen, NULL, NULL);
+		WideCharToMultiByte(CP_ACP, 0, bstr, -1, dest, (int)destLen, NULL, NULL);
 	}
 	else {
 		SysFreeString(bstr);
@@ -55,7 +55,7 @@ inline BOOL TextCommma(_In_ CHAR* src, _Out_ CHAR* dest) {
 		return FALSE;
 	}
 
-	INT len = strlen(src);
+	SIZE_T len = strlen(src);
 
 	while (*src) {
 		*dest++ = *src++;
