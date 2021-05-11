@@ -64,6 +64,7 @@ inline BOOL TextCommma(_In_ CHAR* src, _Out_ CHAR* dest) {
 			*dest++ = ',';
 	}
 	*dest++ = 0;
+	return TRUE;
 }
 
 #define MAX_BUFFER_LENGTH 1024

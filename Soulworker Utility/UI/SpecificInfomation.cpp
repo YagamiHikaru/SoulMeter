@@ -142,7 +142,7 @@ VOID SpecificInformation::UpdateSkillTable() {
 
 		UINT64 max_Damage = 1;
 		CHAR comma[128] = { 0 }; CHAR label[128] = { 0 };
-		UINT windowWidth = ImGui::GetWindowWidth();
+		FLOAT windowWidth = ImGui::GetWindowWidth();
 
 		ImGui::SetWindowFontScale(_tableFontScale);
 

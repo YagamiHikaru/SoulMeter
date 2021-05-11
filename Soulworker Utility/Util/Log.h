@@ -182,8 +182,8 @@ public:
 
         return TRUE;
     }
-    static string gen_random(const int len) {
 
+    static string gen_random(const int len) {
         string tmp_s;
         static const char alphanum[] =
             "0123456789"
@@ -197,8 +197,6 @@ public:
         for (int i = 0; i < len; ++i)
             tmp_s += alphanum[rand() % (sizeof(alphanum) - 1)];
 
-
         return tmp_s;
-
     }
 };

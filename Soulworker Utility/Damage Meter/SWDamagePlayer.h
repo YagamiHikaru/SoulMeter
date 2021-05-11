@@ -2,7 +2,7 @@
 #include ".\Damage Meter\SWDamageMonster.h"
 using namespace std;
 
-#define DEBUG_DAMAGE_PLAYER 0
+#define DEBUG_DAMAGE_PLAYER 1
 
 class SWDamagePlayer : public MemoryPool<SWDamagePlayer, 30> {
 private:

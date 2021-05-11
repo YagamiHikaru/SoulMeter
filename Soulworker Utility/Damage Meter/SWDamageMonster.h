@@ -2,7 +2,7 @@
 #include ".\Damage Meter\SWDamageSkill.h"
 using namespace std;
 
-#define DEBUG_DAMAGE_MONSTER 0
+#define DEBUG_DAMAGE_MONSTER 1
 #define MONSTER_NAME_LEN 64
 
 class SWDamageMonster : public MemoryPool<SWDamageMonster, 100> {

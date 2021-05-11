@@ -78,21 +78,20 @@ private:
 
 			memcpy(_data + _curSize, data, size);
 
-			int temp_debug = _curSize;
+			auto temp_debug = _curSize;
 			_curSize += size;
 
 #if DEBUG_SEGMENTATION == 1
-			Log::WriteLogA(const_cast<CHAR*>("[segmentationPacket AppendData Before curSize = %d After curSize = %d]"), temp_debug, _curSize);
+			Log::WriteLogA(const_cast<CHAR*>("[segmentationPacket AppendData Before curSize = %u After curSize = %u]"), temp_debug, _curSize);
 
-			for (int i = temp_debug; i < _curSize; i++)
+			for (auto i = temp_debug; i < _curSize; i++)
 				printf("%02x ", _data[i]);
 			printf("\n");
 #endif
 
 			if (_curSize == _packetSize)
 				return SEGMENTATION_SUCCESS;
-			else if (_curSize < _packetSize)
-				return SEGMENTATION_FAILED;
+			return SEGMENTATION_FAILED;
 		}
 
 		IPv4Packet* GetData() {

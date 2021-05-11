@@ -640,7 +640,7 @@ BOOL UiOption::SetBasicOption() {
 	return TRUE;
 }
 
-const ImU32& UiOption::GetJobColor(UINT index) {
+const ImU32 UiOption::GetJobColor(UINT index) {
 
 	if (index < 0 || index > 9)
 		return ImGui::ColorConvertFloat4ToU32(_jobColor[0]);

@@ -39,7 +39,7 @@ VOID DXInput::Shutdown() {
 	if (_keyboard != nullptr) {
 		_keyboard->Unacquire();
 		_keyboard->Release();
-		_keyboard == nullptr;
+		_keyboard = nullptr;
 	}
 
 	if (_directInput != nullptr) {
